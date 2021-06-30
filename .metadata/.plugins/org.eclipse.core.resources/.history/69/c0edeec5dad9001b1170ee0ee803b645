@@ -1,0 +1,41 @@
+package queque;
+
+import java.util.ArrayList;
+
+public class QuequeMmC {
+	private Double lambda;
+	private Double niu;
+	private Double ro;
+	private ArrayList<Probability> pn;
+	private Double Lq;
+	private Double Ls;
+	private Double Ws;
+	private Double Wq;
+	private Double c_c;
+	private Integer n;
+	private Double probabilityAccum;
+	private Integer servers;
+	public QuequeMmC(Double lambda, Double niu, Integer c ,Integer n) {
+		this.lambda = lambda;
+		this.niu = niu;
+		this.n = n;
+		this.servers = c;
+		this.pn = new ArrayList<Probability>();
+		this.probabilityAccum = 0.0;
+	}
+	public Integer fact(Integer n) {
+		if (n == 1) {
+			return 1;
+		}
+		if (n == 0) {
+			return 1;
+		}
+		return n * fact(n - 1);
+	}
+	private void calcP0() {
+		
+	}
+	public void process() {
+		
+	}
+}

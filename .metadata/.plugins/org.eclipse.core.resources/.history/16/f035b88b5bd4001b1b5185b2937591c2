@@ -1,0 +1,15 @@
+import java.util.ArrayList;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Double p0 = 0.01818181818;
+		ArrayList<Double> u = new ArrayList<>();
+		u.add();
+		for (Integer i = 1; i < 100; i++) {
+			
+		}
+	}
+
+}

@@ -1,0 +1,8 @@
+package queque;
+
+public class QuequeMmC {
+	
+	public QuequeMmC() {
+		
+	}
+}

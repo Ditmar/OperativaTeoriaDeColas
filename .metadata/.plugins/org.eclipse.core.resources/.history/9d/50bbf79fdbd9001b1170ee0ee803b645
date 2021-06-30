@@ -1,0 +1,56 @@
+package queque;
+
+import java.util.ArrayList;
+
+public class QuequeMmC {
+	private Double lambda;
+	private Double niu;
+	private Double ro;
+	private ArrayList<Probability> pn;
+	private Double Lq;
+	private Double Ls;
+	private Double Ws;
+	private Double Wq;
+	private Double c_c;
+	private Integer n;
+	private Double probabilityAccum;
+	private Integer servers;
+	public QuequeMmC(Double lambda, Double niu, Integer c ,Integer n) {
+		this.lambda = lambda;
+		this.niu = niu;
+		this.n = n;
+		this.servers = c;
+		this.pn = new ArrayList<Probability>();
+		this.probabilityAccum = 0.0;
+	}
+	private Integer fact(Integer n) {
+		if (n == 1) {
+			return 1;
+		}
+		if (n == 0) {
+			return 1;
+		}
+		return n * fact(n - 1);
+	}
+	private void calcP0() {
+		Double totalcalc = 0.0;
+		for (Integer n = 0; n < this.servers; n++) {
+			Double numerator = Math.pow(this.ro, n);
+			Integer nfactorial = fact(n);
+			totalcalc += numerator / nfactorial;
+		}
+		Double nextcalc = Math.pow(this.ro, this.servers); 
+		Integer cfactorial = fact(this.servers);
+		Double auxGen = 1 / (1 - this.ro / this.servers)
+	}
+	private void calcPn(Integer n) {
+		if (n < this.servers) {
+			
+		} else {
+			
+		}
+	}
+	public void process() {
+		
+	}
+}

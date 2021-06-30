@@ -1,0 +1,15 @@
+package colas;
+
+import queque.QuequeMm1;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//escenarios! 
+		QuequeMm1 mm1 = new QuequeMm1(7.0, 10.0, 20);
+		mm1.process();
+		System.out.println();
+	}
+
+}

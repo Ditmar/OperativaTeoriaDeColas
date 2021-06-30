@@ -1,0 +1,13 @@
+package queque;
+
+public class QuequeMm1 {
+	private Double lambda;
+	private Double niu;
+	public QuequeMm1 (Double lambda, Double niu) {
+		this.lambda = lambda;
+		this.niu = niu;
+		if (this.lambda < this.niu) {
+			
+		}
+	}
+}

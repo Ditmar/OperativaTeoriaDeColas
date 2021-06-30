@@ -1,0 +1,20 @@
+package colas;
+
+import queque.QuequeMm1;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//escenarios! 
+		Double lambda = 7.0;
+		Double niu = 10.0;
+		
+		QuequeMm1 mm1 = new QuequeMm1(7.0, 10.0, 20);
+		mm1.process();
+		System.out.println("Lambda= " + mm1.getLambda() + " Mu = " + mm1.getNiu());
+		System.out.println("Lambda= " + mm1.getLambda() + " Mu = " + mm1.getNiu());
+		
+	}
+
+}

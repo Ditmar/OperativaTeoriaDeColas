@@ -1,0 +1,34 @@
+package queque;
+
+public class QuequeMm1 {
+	private Double lambda;
+	private Double niu;
+	private Double ro;
+	public QuequeMm1 (Double lambda, Double niu) {
+		this.lambda = lambda;
+		this.niu = niu;
+	}
+	private void calcRo() {
+		this.ro = this.lambda / this.niu;
+	}
+	public Double calcPn(Integer n) {
+		if (n < 0) {
+			System.out.println("No es posible resolver el problema n < 0!");	
+			return null;
+		}
+		return (1 - this.ro) * Math.pow(this.ro, n);
+	}
+	public Double calcLs() {
+		return this.ro / (1 - this.ro);
+	}
+	public Double calcWs() {
+		return 1 / (this.niu - this.lambda);
+	}
+	public void process() {
+		if (this.lambda > this.niu) {
+			System.out.println("No es posible resolver el problema");
+			return;
+		}
+		
+	}
+}

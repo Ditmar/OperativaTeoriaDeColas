@@ -1,0 +1,16 @@
+package queque;
+
+import java.util.ArrayList;
+
+public class QuequeMmC {
+	private Double lambda;
+	private Double niu;
+	private Double ro;
+	public QuequeMmC(Double lambda, Double niu, Integer n) {
+		this.lambda = lambda;
+		this.niu = niu;
+		this.n = n;
+		this.pn = new ArrayList<Probability>();
+		this.probabilityAccum = 0.0;
+	}
+}

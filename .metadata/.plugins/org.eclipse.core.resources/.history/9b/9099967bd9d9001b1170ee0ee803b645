@@ -1,0 +1,10 @@
+package queque;
+
+public class QuequeMmC {
+	private Double lambda;
+	private Double niu;
+	private Double ro;
+	public QuequeMmC() {
+		
+	}
+}

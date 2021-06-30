@@ -1,0 +1,18 @@
+package queque;
+
+public class QuequeMm1 {
+	private Double lambda;
+	private Double niu;
+	private Double ro;
+	public QuequeMm1 (Double lambda, Double niu) {
+		this.lambda = lambda;
+		this.niu = niu;
+	}
+	public void process() {
+		if (this.lambda > this.niu) {
+			System.out.println("No es posible resolver el problema");
+			return;
+		}
+		
+	}
+}

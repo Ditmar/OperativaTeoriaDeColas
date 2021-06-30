@@ -1,0 +1,74 @@
+package queque;
+
+import java.util.ArrayList;
+
+public class QuequeMmC {
+	private Double lambda;
+	private Double niu;
+	private Double ro;
+	private ArrayList<Probability> pn;
+	private Double Lq;
+	private Double p0;
+	private Double Ls;
+	private Double Ws;
+	private Double Wq;
+	private Double c_c;
+	private Integer n;
+	private Double probabilityAccum;
+	private Integer servers;
+	public QuequeMmC(Double lambda, Double niu, Integer c ,Integer n) {
+		this.lambda = lambda;
+		this.niu = niu;
+		this.n = n;
+		this.servers = c;
+		this.pn = new ArrayList<Probability>();
+		this.probabilityAccum = 0.0;
+	}
+	private Integer fact(Integer n) {
+		if (n == 1) {
+			return 1;
+		}
+		if (n == 0) {
+			return 1;
+		}
+		return n * fact(n - 1);
+	}
+	private Double calcRo() {
+		return this.lambda / this.niu;
+	}
+	private Double calcP0() {
+		if (this.ro / this.servers >= 1) {
+			System.out.print("no cumple para la propidad ro/c < 1");
+			return null;
+		}
+		Double totalcalc = 0.0;
+		for (Integer n = 0; n < this.servers; n++) {
+			Double numerator = Math.pow(this.ro, n);
+			Integer nfactorial = fact(n);
+			totalcalc += numerator / nfactorial;
+		}
+		Double nextcalc = Math.pow(this.ro, this.servers); 
+		Integer cfactorial = fact(this.servers);
+		Double auxGen = 1 / (1 - this.ro / this.servers);
+		Double resultden = totalcalc + (nextcalc / cfactorial) * auxGen;
+		return 1 / resultden;
+	}
+	private Double calcPn(Integer n) {
+		if (n < this.servers) {
+			return (Math.pow(this.ro, n) / fact(n)) * this.p0;
+		} else {
+			return (Math.pow(this.ro, n) / (fact(this.servers) * Math.pow(this.servers, (n - this.servers)))) * this.p0;
+		}
+	}
+	private Double calcLq() {
+		Double num = Math.pow(this.ro, this.servers + 1);
+		Double cfactorial = fact(this.servers - 1)!; 
+		return null;
+	}
+	public void process() {
+		this.ro = this.calcRo();
+		this.p0 = this.calcP0();
+		
+		System.out.println(this.p0);
+	}
+}

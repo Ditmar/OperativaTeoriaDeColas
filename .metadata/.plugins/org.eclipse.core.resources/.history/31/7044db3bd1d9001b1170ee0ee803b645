@@ -1,0 +1,8 @@
+package queque;
+
+public class QuequeMm1 {
+	private Double lambda;
+	public QuequeMm1 () {
+		
+	}
+}

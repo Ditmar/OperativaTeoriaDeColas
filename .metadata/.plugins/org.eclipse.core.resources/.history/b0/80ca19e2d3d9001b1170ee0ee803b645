@@ -1,0 +1,10 @@
+package queque;
+
+public class Probability {
+	private Double pn;
+	private Double probabilityAccum;
+	public Probability(Double pn, Double proacum) {
+		this.pn = pn;
+		this.probabilityAccum = proacum;
+	}
+}
